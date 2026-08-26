@@ -22,10 +22,13 @@ class _MyWidgetState extends State<ControllerScreen> {
       onTapUp: (_) => _sendCommand("S"),
       onTapCancel: () => _sendCommand("S"),
       child: Container(
-        width: 60,
-        height: 60,
-        decoration: BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
-        child: Icon(icon, color: Colors.white, size: 28),
+        width: 70,
+        height: 70,
+        decoration: BoxDecoration(
+          color: Color(0xff172946),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Icon(icon, color: Colors.white, size: 40),
       ),
     );
   }
@@ -33,15 +36,13 @@ class _MyWidgetState extends State<ControllerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff141118),
       appBar: AppBar(
-        backgroundColor: Color(0xff141118),
         title: Text(
           'Controller',
           style: TextStyle(
-            fontSize: 22,
+            fontSize: 28,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: Color(0xff172946),
             letterSpacing: 2,
           ),
         ),
@@ -49,19 +50,34 @@ class _MyWidgetState extends State<ControllerScreen> {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.all(50),
           child: Row(
-            mainAxisAlignment: .center,
             children: [
               Expanded(
                 child: Row(
                   mainAxisAlignment: .spaceAround,
                   children: [
-                    _buildCircleButton(Icons.keyboard_arrow_left_rounded, "L"),
-                    _buildCircleButton(Icons.keyboard_arrow_right_rounded, "R"),
+                    _buildCircleButton(
+                      Icons.keyboard_double_arrow_left_rounded,
+                      "L",
+                    ),
+                    _buildCircleButton(
+                      Icons.keyboard_double_arrow_right_rounded,
+                      "R",
+                    ),
                   ],
                 ),
               ),
+              SizedBox(width: 50),
+              SizedBox(
+                width: 338,
+                height: 186,
+                child: Image.asset(
+                  "assets/images/controller-logo.png",
+                  fit: .fill,
+                ),
+              ),
+
               Expanded(
                 child: Column(
                   mainAxisAlignment: .spaceAround,
