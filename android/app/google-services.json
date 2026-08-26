@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1092180028360",
+    "firebase_url": "https://turbo-de3d0-default-rtdb.firebaseio.com",
+    "project_id": "turbo-de3d0",
+    "storage_bucket": "turbo-de3d0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092180028360:android:3b60c9d7a16521d1a4eefd",
+        "android_client_info": {
+          "package_name": "com.example.turbo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx4Q-VOD7WsO20VU80oAi5XMMXdzYPESM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
