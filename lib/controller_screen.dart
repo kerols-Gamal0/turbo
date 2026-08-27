@@ -16,7 +16,7 @@ class _MyWidgetState extends State<ControllerScreen> {
     _databaseRef.set(command);
   }
 
-  Widget _buildCircleButton(IconData icon, String command) {
+  Widget _buildSquareButton(IconData icon, String command) {
     return GestureDetector(
       onTapDown: (_) => _sendCommand(command),
       onTapUp: (_) => _sendCommand("S"),
@@ -57,11 +57,11 @@ class _MyWidgetState extends State<ControllerScreen> {
                 child: Row(
                   mainAxisAlignment: .spaceAround,
                   children: [
-                    _buildCircleButton(
+                    _buildSquareButton(
                       Icons.keyboard_double_arrow_left_rounded,
                       "L",
                     ),
-                    _buildCircleButton(
+                    _buildSquareButton(
                       Icons.keyboard_double_arrow_right_rounded,
                       "R",
                     ),
@@ -82,11 +82,11 @@ class _MyWidgetState extends State<ControllerScreen> {
                 child: Column(
                   mainAxisAlignment: .spaceAround,
                   children: [
-                    _buildCircleButton(
+                    _buildSquareButton(
                       Icons.keyboard_double_arrow_up_rounded,
                       "F",
                     ),
-                    _buildCircleButton(
+                    _buildSquareButton(
                       Icons.keyboard_double_arrow_down_rounded,
                       "B",
                     ),
