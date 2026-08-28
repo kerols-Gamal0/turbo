@@ -5,10 +5,10 @@ class ControllerScreen extends StatefulWidget {
   const ControllerScreen({super.key});
 
   @override
-  State<ControllerScreen> createState() => _MyWidgetState();
+  State<ControllerScreen> createState() => _ControllerScreen();
 }
 
-class _MyWidgetState extends State<ControllerScreen> {
+class _ControllerScreen extends State<ControllerScreen> {
   final DatabaseReference _databaseRef = FirebaseDatabase.instance.ref(
     "command",
   );
@@ -16,7 +16,7 @@ class _MyWidgetState extends State<ControllerScreen> {
     _databaseRef.set(command);
   }
 
-  Widget _buildSquareButton(IconData icon, String command) {
+  Widget _buildButton(IconData icon, String command) {
     return GestureDetector(
       onTapDown: (_) => _sendCommand(command),
       onTapUp: (_) => _sendCommand("S"),
@@ -57,11 +57,8 @@ class _MyWidgetState extends State<ControllerScreen> {
                 child: Row(
                   mainAxisAlignment: .spaceAround,
                   children: [
-                    _buildSquareButton(
-                      Icons.keyboard_double_arrow_left_rounded,
-                      "L",
-                    ),
-                    _buildSquareButton(
+                    _buildButton(Icons.keyboard_double_arrow_left_rounded, "L"),
+                    _buildButton(
                       Icons.keyboard_double_arrow_right_rounded,
                       "R",
                     ),
@@ -82,14 +79,8 @@ class _MyWidgetState extends State<ControllerScreen> {
                 child: Column(
                   mainAxisAlignment: .spaceAround,
                   children: [
-                    _buildSquareButton(
-                      Icons.keyboard_double_arrow_up_rounded,
-                      "F",
-                    ),
-                    _buildSquareButton(
-                      Icons.keyboard_double_arrow_down_rounded,
-                      "B",
-                    ),
+                    _buildButton(Icons.keyboard_double_arrow_up_rounded, "F"),
+                    _buildButton(Icons.keyboard_double_arrow_down_rounded, "B"),
                   ],
                 ),
               ),
